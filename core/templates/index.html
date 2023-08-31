@@ -1,0 +1,331 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="{% static 'css/pace.js'%}"></script>
+</head>
+<body>
+    <div id="preloader">
+        <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="hsl(193,90%,55%)" />
+                    <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                </linearGradient>
+            </defs>
+            <circle class="pl__ring" r="56" cx="64" cy="64" fill="none" stroke="hsla(0,10%,10%,0.1)" stroke-width="16" stroke-linecap="round" />
+            <path class="pl__worm" d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z" fill="none" stroke="url(#pl-grad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="44 1111" stroke-dashoffset="10" />
+        </svg>
+    </div>
+  
+         
+
+        
+        <nav class="nav-desktop">
+            <a href="#initial">HOME</a>
+            <a href="#about">SOBRE</a>
+            <a href="#services">SERVIÇOS</a>
+            <a href="#contact">CONTACTO</a>
+            <a href="#entrar">ENTRAR</a>
+            <div id="indicator"></div>
+        </nav>
+
+        <nav class="nav-phone">
+            <div class="navbar">
+              <div class="container nav-container">
+                  <input class="checkbox" type="checkbox" name="" id="" />
+                  <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                  </div>  
+                
+                <div class="menu-items" id="ola">
+                  <li><a href="#initial">HOME</a></li>
+                  <li><a href="#about">SOBRE</a></li>
+                  <li><a href="#services">SERVIÇOS</a></li>
+                  <li><a href="#contact">CONTACTO</a></li>
+                  <li><a href="#entrar">ENTRAR</a></li>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+
+
+
+        <div class="initial hidden show" id="initial" style="display: flex; background-color: white; width: 100%; height: 105vh;">
+            <img src="{% static 'css/logo.png'%}" style="max-height: 25%;"alt="">
+            <div class="container-initial">
+                <span class="text first-text">Queres conhecer melhor </span>
+                <span class="text sec-text"><em>Crypto</em>?</span>
+            </div>
+            <a href="#entrar" style="text-decoration: none;"><button class="ui-btn">
+                <span>
+                  Entrar
+                </span>
+              </button></a>
+            <section id="section10" class="demo" >
+                <a href="#about" ><span></span></a>
+            </section>
+        </div>
+        <svg class="section-divider" viewBox="0 0 1920 60" aria-hidden="true"><path data-theme="softSecondary" fill="black" d="M0,80.75H1920V45.833H1742.083a80.491,80.491,0,0,1,12.863-1.55c5.2-.26,17.24-.3,24.153-.24,26.69.222,54.377,1.094,79.341.96,19.287-.1,37.1-.372,53.573-.788L1920,44V34.078l-6.614.216-9.221.256c-6.252.147-12.7.249-19.265.32-13.132.14-26.739.15-40.206.125-26.935-.052-53.313-.247-74.22.168-14.367-1.4-32.582-.756-48.293-1.92-10.145.509-20.876.936-24.149,2.4-16.09-.266-37.611,2.532-50.019.479V34.684c-10.959-2.291-33.371-1.869-48.292-3.84-15.861-.512-26.214,1.347-39.671,1.92-7.032.178-5.941-.773-13.8-.481-40.751-.071-41.131,5.477-62.087,8.16-4.569-5.691-47.085-5.126-77.622-5.04-2.333-4.154-22.643-5.808-50.015-6.479-4.677-2.069-17.763-2.969-22.423-5.04-4.7-.175-3.474.477-6.9.479-11.485-2.964-40.092-2.449-63.813-3.36-23.312.6-29.4,3.589-55.195,3.841-8.3-3.783-56.5-4.561-84.513-3.361-.316-1.857-5.682-3.862-20.7-4.8-2.193-.137-6.78.122-10.352,0-16.331-.564-22.974-3.145-39.671-1.441-22.812-1.938-73.831-3.919-98.311-.719-4.315-2.2-15.369-3.462-20.7-5.521-23.122-.714-41.26-2.815-65.54-2.64-13.5,1-29.918,1.6-39.671,3.12.27,1.317-1.305,2.38-6.9,2.88-35.562-1.333-83.117-2.545-93.139,2.88-14.338-.314-8.341,2.2-22.423,1.92-5.17-.16-2.615-1.4-6.9-1.68-36.327-1.894-80.653-1.762-100.041,2.161-12.433-1.631-21.648-3.708-36.221-5.04-13.359.1-36.33-.325-48.293-1.2-32.483.6-42.463,4.331-53.471,7.92-25.227-.147-43.752,2.274-58.641,4.321-11.966-1.189-27.56-.426-39.67-1.441-19.514,1.284-40.772,2.328-53.468,4.561C301.584,31.04,294,33.888,283.7,37.8c-15.047-.774-19.865-3.5-36.221-4.321-10.453-.522-37.12-1.01-48.3-.959-10.184.046-17.188,1.062-27.595.719-18.244,2.022-31.516,4.736-46.57,7.2-3.726,2.091-9.8,3.854-17.5,5.39H4.061c-.734-1.281-1.512-2.592-2.344-3.949-.546-.09-1.13-.175-1.717-.26Z"/></svg>
+
+               <!-- ***** Preloader Start ***** -->
+               <video autoplay muted loop playsinline id="video-bg">
+                <source src="{% static 'css/bg3.mp4' %}" type="video/mp4">
+                <!-- Include additional source elements for different video formats -->
+            </video>
+
+        
+        <!-- <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="Payment Gateway"
+            data-amount="1"
+            data-locace="auto"></script>-->
+
+        
+
+        <div class="about hidden" id="about">
+            <h1 class="title hidden"> Sobre nós </h1>
+            <div class="container-about">
+                <div class="card">
+                    <div class="um hidden">
+                        <img src="{% static 'images/question.gif'%}" alt="">
+                        <h1>Quem somos</h1>
+                        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque voluptatum cumque optio dolorum, odio saepe eligendi quos labore libero reiciendis est placeat impedit distinctio pariatur consequatur. Harum, quia esse! Nemo!</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="dois hidden">
+                        <img src="{% static 'images/target.gif'%}" alt="">
+                        <h1>O nosso objetivo</h1>
+                        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque voluptatum cumque optio dolorum, odio saepe eligendi quos labore libero reiciendis est placeat impedit distinctio pariatur consequatur. Harum, quia esse! Nemo!</h3>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div class="about-phone hidden" id="about">
+            <div class="services hidden" id="services" style="display: flex;">
+                <h1 class="title hidden">Sobre Nós</h1>
+                <div class="container-services">
+                    <div class="service-container-img-right">
+                        <div class="text-container hidden">
+                            <h1>Quem somos</h1>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, officia. Nihil voluptatem explicabo deserunt necessitatibus cupiditate cum quod sed repellat fugiat numquam, mollitia temporibus quam doloribus reiciendis itaque atque debitis.</h3>
+                        </div>
+                        <div class="img-container-right hidden">
+                            <img src="{% static 'images/question.gif'%}" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="service-container-img-left">
+                        <div class="text-container hidden">
+                            <h1>O nosso objetivo</h1>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, officia. Nihil voluptatem explicabo deserunt necessitatibus cupiditate cum quod sed repellat fugiat numquam, mollitia temporibus quam doloribus reiciendis itaque atque debitis.</h3>
+                        </div>
+                        <div class="img-container-left hidden">
+                            <img src="{% static 'images/target.gif'%}" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+                
+    
+                
+            </div>
+        </div>
+
+
+        <div class="services hidden" id="services" style="display: flex;">
+            <h1 class="title hidden"> Serviços </h1>
+            <div class="container-services">
+                <div class="service-container-img-right">
+                    <div class="text-container hidden">
+                        <h1>Crypto</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, officia. Nihil voluptatem explicabo deserunt necessitatibus cupiditate cum quod sed repellat fugiat numquam, mollitia temporibus quam doloribus reiciendis itaque atque debitis.</h3>
+                    </div>
+                    <div class="img-container-right hidden">
+                        <img src="{% static 'images/crypto.gif' %}" alt="">
+                    </div>
+                    
+                </div>
+                <div class="service-container-img-left">
+                    <div class="text-container hidden">
+                        <h1>Real Estate</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, officia. Nihil voluptatem explicabo deserunt necessitatibus cupiditate cum quod sed repellat fugiat numquam, mollitia temporibus quam doloribus reiciendis itaque atque debitis.</h3>
+                    </div>
+                    <div class="img-container-left hidden">
+                        <img src="{% static 'images/house.gif' %}" alt="">
+                    </div>
+                    
+                </div>
+                <div class="service-container-img-right">
+                    <div class="text-container hidden">
+                        <h1>Fitness</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, officia. Nihil voluptatem explicabo deserunt necessitatibus cupiditate cum quod sed repellat fugiat numquam, mollitia temporibus quam doloribus reiciendis itaque atque debitis.</h3>
+                    </div>
+                    <div class="img-container-right hidden">
+                        <img src="{% static 'images/fitness.gif' %}" alt="">
+                    </div>
+                    
+                </div>
+                <div class="service-container-img-left">
+                    <div class="text-container hidden">
+                        <h1>E-Commerce</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, officia. Nihil voluptatem explicabo deserunt necessitatibus cupiditate cum quod sed repellat fugiat numquam, mollitia temporibus quam doloribus reiciendis itaque atque debitis.</h3>
+                    </div>
+                    <div class="img-container-left hidden">
+                        <img src="{% static 'images/commerce.gif' %}" alt="">
+                    </div>
+                    
+                </div>
+                <div class="service-container-img-right">
+                    <div class="text-container hidden">
+                        <h1>Gentlemens Club</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, officia. Nihil voluptatem explicabo deserunt necessitatibus cupiditate cum quod sed repellat fugiat numquam, mollitia temporibus quam doloribus reiciendis itaque atque debitis.</h3>
+                    </div>
+                    <div class="img-container-right hidden">
+                        
+                        <img src="{% static 'images/gen.gif' %}" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            
+        </div>
+
+
+
+
+        
+
+
+        <div class="contact hidden" id="contact">
+            <div class="title hidden">Contacto</div>
+            <div class="text-first hidden">
+                <h1>Envia-nos uma mensagem</h1>
+                <div class="form-cont">
+                    <form method="POST" id="inscription-form">
+                        {% csrf_token %}
+                        <!--<h4>Numero de inscricoes: {{n}}</h4>-->
+                        <label for="id_nome"></label>
+                        <input style="padding-left: 5%;"class="Input" type="text" placeholder="Nome" id="id_nome" name="nome" required>
+            
+                        <label for="id_email"></label>
+                        <input style="padding-left: 5%;"class="Input" type="email" placeholder="Email" id="id_email" name="email" required>
+            
+                        <label for="id_assunto"></label>
+                        <input style="padding-left: 5%;"class="Input" type="text" placeholder="Assunto" id="id_assunto" name="assunto" required/>
+
+                        <label for="id_assunto"></label>
+                        <input style="padding-left: 5%;"class="Input" type="text" placeholder="Mensagem" id="id_body" name="body" required/>
+
+            
+                        <button type="submit" id="submit-button"><span>Enviar</span></button>
+                        <div class="messages">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <h5{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h5>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="entrar hidden" id="entrar">
+            <div class="text-first hidden" style="display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+                <h1>Pronto para mudar a vida?<br></h1>
+                <h1> </h1>
+                <h3>Para entrares na nossa comunidade terás de responder a umas <br>perguntas e de seguida pagar o valor de X€ caso sejas aprovado</h3>
+                <a href="/form" style="align-items: center; justify-content: center;margin: 5%;"><button type="submit" id="submit-button"><span>ENTRAR</span></button></a>
+                
+            </div>
+        </div>
+
+        <div class="footer hidden">
+            <h2>Copyright © 2023 Nome</h2>
+            <p style="font-size: 10px; color: grey;">Made by 4rentnto2sale</p>
+        </div>
+
+
+
+
+    
+
+    
+  
+
+
+</body>
+
+<script>
+    
+
+    jQuery(window).on("load", function () {
+        $("#preloader").fadeOut("slow");
+
+    });
+
+
+    const text = document.querySelector(".sec-text")
+
+    const textLoad = () => {
+        setTimeout(() => {
+            text.textContent = "Crypto?";
+        }, 0);
+        setTimeout(() => {
+            text.textContent = "Biohacking?";
+        }, 4000);
+        setTimeout(() => {
+            text.textContent = "Fitness?";
+        }, 8000);
+
+        setTimeout(() => {
+            text.textContent = "Mindset?";
+        }, 12000);
+
+        setTimeout(() => {
+            text.textContent = "E-commerce?";
+        }, 16000);
+    }
+
+    textLoad();
+    setInterval(textLoad,20000);
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    const splash = document.querySelector(".splash");
+
+
+   
+    
+
+</script>
+</html>

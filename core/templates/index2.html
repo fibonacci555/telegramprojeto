@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Halls of Ivy</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/igorescobar/jQuery-Mask-Plugin/master/src/jquery.mask.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="{% static 'css/logo.png'%}">
+
+
+</head>
+<body>
+    <!-- Coloque o conteúdo acima do vídeo dentro de uma div com id="conteudo" -->
+    <div id="conteudo">
+        <h1>Meu site incrível</h1>
+        <p>Bem-vindo ao meu site com vídeo de fundo!</p>
+    </div>
+
+    <!-- Adicione o elemento de vídeo com id="video-background" -->
+    <video id="video-background" loop muted playsinline autoplay>
+        <source src="{% static 'css/loopfinal.mp4' %}" type="video/mp4">
+        <!-- Adicione outros formatos de vídeo aqui, caso necessário -->
+    </video>
+</body>
+</html>
